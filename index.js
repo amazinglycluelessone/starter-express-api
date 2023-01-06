@@ -21,7 +21,7 @@ require('axios-cookiejar-support').wrapper(axios);
 //     console.log(cookieJar);
 //   });
 
-app.get('/', async (req, res) => {
+app.get('/login', async (req, res) => {
     try{
 		var config = {
 			method: 'get',
@@ -32,7 +32,7 @@ app.get('/', async (req, res) => {
 
 		axios(config)
 			.then(function (response) {
-				res.send(response.data)
+				res.send('200')
 		})
 		.catch(function (error) {
 			console.log(error);
